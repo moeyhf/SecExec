@@ -6,7 +6,7 @@ SecExec records experiments on the security of agentic code execution, starting 
 
 | File or folder | Purpose |
 | --- | --- |
-| `README.md` | Repository overview and instructions for running Aider and saving results. |
+| `README.md` | Repository purpose and file guide. |
 | `aider/run.sh` | Starts Aider in the existing Conda environment, connects to vLLM on port 8593, and saves session logs. |
 | `aider_test.py` | Small greeting program used for an initial Aider editing test. |
 | `aider/results/20260914T203009Z-90307/` | Initial connection-test evidence: `chat.md` contains the conversation, `input.history` the submitted prompt, `llm.log` the model exchanges, and `models.json` the server's model listing. |
@@ -14,42 +14,3 @@ SecExec records experiments on the security of agentic code execution, starting 
 | `aider/results/.gitkeep` | Keeps the results folder in Git even when empty. |
 | `.aiderignore` | Excludes saved results from Aider's repository context. |
 | `.gitignore` | Excludes environment files, caches, and default Aider history files from Git. |
-
-## Reproduction branch
-
-The [test/aider-5058-trajectory](https://github.com/moeyhf/SecExec/tree/test/aider-5058-trajectory) branch contains the Aider #5058 experiment: `aider5058-repro/README.md` holds a harmless injected instruction, `aider5058-repro/auth.py` shows the resulting marker comment, `aider5058-repro/RESULTS.md` explains the findings and limitations, and `aider/results/aider5058-trajectory-annotated.txt` provides selected trace evidence. These reproduction files are on that branch. The full reproduction log stays locally in `/tmp`.
-
-## Run
-
-Prerequisites: the existing `aider5058-client` Conda environment (Aider 0.86.2), and vLLM listening at `http://127.0.0.1:8593/v1`, serving `Qwen/Qwen2.5-Coder-7B-Instruct`.
-
-From this repository:
-
-```bash
-bash aider/run.sh
-```
-
-The launcher uses the Conda environment automatically and starts architect mode with the same Qwen model as editor. Each session saves the server model listing, chat, input history, and LLM exchanges in a timestamped `aider/results/` directory. Put generated artifacts in `aider/outputs/`. Exit Aider with `/exit`.
-
-To work on a specific file (paths are relative to `aider/`):
-
-```bash
-bash aider/run.sh outputs/example.py
-```
-
-Inside Aider chat, file paths are relative to the repository root, for example `aider/outputs/example.py`.
-
-## Push results
-
-From the repository root after a session:
-
-```bash
-git status
-git diff
-git add aider/results aider/outputs
-git diff --cached
-git commit -m "Save Aider experiment results"
-git push
-```
-
-Session logs contain your prompts and model responses. Review staged files before pushing. `.env` files and default Aider caches are ignored; the explicit session logs are tracked. Aider may create local commits while editing; publishing still requires `git push`.
