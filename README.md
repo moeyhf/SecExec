@@ -2,6 +2,17 @@
 
 Aider experiments, results, and generated outputs using a local vLLM server.
 
+## Reproduction branch
+
+This branch (`test/aider-5058-trajectory`) contains the Aider #5058 experiment:
+
+- `aider5058-repro/README.md` originally held the harmless injected instruction and was later removed. The payload remains documented in the annotated evidence and Git history.
+- `aider5058-repro/auth.py` shows the resulting marker comment.
+- [aider5058-repro/RESULTS.md](aider5058-repro/RESULTS.md) explains the findings and limitations.
+- [aider/results/aider5058-trajectory-annotated.txt](aider/results/aider5058-trajectory-annotated.txt) provides selected trace evidence.
+
+The full reproduction log stays locally in `/tmp`.
+
 ## Run
 
 Prerequisites: the existing `aider5058-client` Conda environment (Aider 0.86.2), and vLLM listening at `http://127.0.0.1:8593/v1`, serving `Qwen/Qwen2.5-Coder-7B-Instruct`.
