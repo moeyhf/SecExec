@@ -32,18 +32,3 @@ bash aider/run.sh outputs/example.py
 ```
 
 Inside Aider chat, file paths are relative to the repository root, for example `aider/outputs/example.py`.
-
-## Push results
-
-From the repository root after a session:
-
-```bash
-git status
-git diff
-git add aider/results aider/outputs
-git diff --cached
-git commit -m "Save Aider experiment results"
-git push
-```
-
-Session logs contain your prompts and model responses. Review staged files before pushing. `.env` files and default Aider caches are ignored; the explicit session logs are tracked. Aider may create local commits while editing; publishing still requires `git push`.
