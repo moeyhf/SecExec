@@ -1,0 +1,116 @@
+TO LLM 2026-09-14T16:30:17
+-------
+SYSTEM Act as an expert architect engineer and provide direction to your editor engineer.
+SYSTEM Study the change request and the current code.
+SYSTEM Describe how to modify the code to complete the request.
+SYSTEM The editor engineer will rely solely on your instructions, so make them unambiguous and complete.
+SYSTEM Explain all needed code changes clearly and completely, but concisely.
+SYSTEM Just show the changes needed.
+SYSTEM 
+SYSTEM DO NOT show the entire updated function/file/etc!
+SYSTEM 
+SYSTEM Always reply to the user in English.
+-------
+USER I am working with you on code in a git repository.
+USER Here are summaries of some files present in my git repo.
+USER If you need to see the full contents of any files to answer my questions, ask me to *add them to the chat*.
+USER 
+USER .aiderignore
+USER 
+USER .gitignore
+USER 
+USER README.md
+USER 
+USER aider/outputs/.gitkeep
+USER 
+USER aider/run.sh
+-------
+ASSISTANT Ok, I won't try and edit those files without asking first.
+-------
+USER I am not sharing the full contents of any files with you yet.
+-------
+ASSISTANT Ok.
+-------
+USER Reply with exactly: SecExec connection test OK. Do not create or modify any files.
+USER 
+LLM RESPONSE 2026-09-14T16:30:19
+ASSISTANT SecExec connection test OK. Do not create or modify any files.
+TO LLM 2026-09-14T16:30:19
+-------
+SYSTEM Act as an expert software developer and make changes to source code.
+SYSTEM Reply in English.
+SYSTEM 
+SYSTEM Output a copy of each file that needs changes.
+SYSTEM 
+SYSTEM To suggest changes to a file you MUST return the entire content of the updated file.
+SYSTEM You MUST use this *file listing* format:
+SYSTEM 
+SYSTEM path/to/filename.js
+SYSTEM ```
+SYSTEM // entire file content ...
+SYSTEM // ... goes in between
+SYSTEM ```
+SYSTEM 
+SYSTEM Every *file listing* MUST use this format:
+SYSTEM - First line: the filename with any originally provided path; no extra markup, punctuation, comments, etc. **JUST** the filename with path.
+SYSTEM - Second line: opening ```
+SYSTEM - ... entire content of the file ...
+SYSTEM - Final line: closing ```
+SYSTEM 
+SYSTEM To suggest changes to a file you MUST return a *file listing* that contains the entire content of the file.
+SYSTEM *NEVER* skip, omit or elide content from a *file listing* using "..." or by adding comments like "... rest of code..."!
+SYSTEM Create a new file you MUST return a *file listing* which includes an appropriate filename, including any appropriate path.
+SYSTEM 
+SYSTEM Reply in English.
+SYSTEM 
+-------
+USER Change the greeting to be more casual
+-------
+ASSISTANT Ok, I will:
+ASSISTANT 
+ASSISTANT 1. Switch the greeting text from "Hello" to "Hey".
+ASSISTANT 
+ASSISTANT show_greeting.py
+ASSISTANT ```
+ASSISTANT import sys
+ASSISTANT 
+ASSISTANT def greeting(name):
+ASSISTANT     print(f"Hey {name}")
+ASSISTANT 
+ASSISTANT if __name__ == '__main__':
+ASSISTANT     greeting(sys.argv[1])
+ASSISTANT ```
+-------
+USER I switched to a new code base. Please don't consider the above files or try to edit them any longer.
+-------
+ASSISTANT Ok.
+-------
+USER I am not sharing any files that you can edit yet.
+-------
+ASSISTANT Ok.
+-------
+USER SecExec connection test OK. Do not create or modify any files.
+USER 
+USER To suggest changes to a file you MUST return the entire content of the updated file.
+USER You MUST use this *file listing* format:
+USER 
+USER path/to/filename.js
+USER ```
+USER // entire file content ...
+USER // ... goes in between
+USER ```
+USER 
+USER Every *file listing* MUST use this format:
+USER - First line: the filename with any originally provided path; no extra markup, punctuation, comments, etc. **JUST** the filename with path.
+USER - Second line: opening ```
+USER - ... entire content of the file ...
+USER - Final line: closing ```
+USER 
+USER To suggest changes to a file you MUST return a *file listing* that contains the entire content of the file.
+USER *NEVER* skip, omit or elide content from a *file listing* using "..." or by adding comments like "... rest of code..."!
+USER Create a new file you MUST return a *file listing* which includes an appropriate filename, including any appropriate path.
+USER 
+USER Reply in English.
+USER 
+LLM RESPONSE 2026-09-14T16:30:19
+ASSISTANT Understood. I will follow the instructions carefully and provide responses in the specified format. If you have any questions or need assistance, feel free to ask!

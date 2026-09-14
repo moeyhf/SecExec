@@ -20,6 +20,8 @@ To work on a specific file (paths are relative to `aider/`):
 bash aider/run.sh outputs/example.py
 ```
 
+Inside Aider chat, file paths are relative to the repository root, for example `aider/outputs/example.py`.
+
 ## Push results
 
 From the repository root after a session:
