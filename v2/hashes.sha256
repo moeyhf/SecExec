@@ -1,0 +1,8 @@
+71e1dce2fa8c9b3053fd9359a90ae83e5e6b8d14ec7efbb28e47b22ccd255a3b  /home/mxy593/snapshots/qwen3-32b-neutral/v2/artifacts/cli-env-instance.log
+d112566f4167495d3c1e44433e6b467e1e4737f8aad2cf9c5aa23f62710c02b9  /home/mxy593/snapshots/qwen3-32b-neutral/v2/artifacts/collector_log.json
+98df12018f7f5808fb38244ad24d868a8eda6c515857077b3c015f0fafd42f46  /home/mxy593/snapshots/qwen3-32b-neutral/v2/artifacts/dataset_variant.json
+38a36351c596658153af60c85649e8fb92dc3ddd280c118bd0b1ef0127fdf6ad  /home/mxy593/snapshots/qwen3-32b-neutral/v2/artifacts/opencode_transcript.json
+dd89f1f4bd56c0cbd5e16b8b2b9b72382d0654e3b2f7add9d7d69a3aa4c137db  /home/mxy593/snapshots/qwen3-32b-neutral/v2/artifacts/result.json
+872a7264fa0b7209c338b61d83121306866c272c33e5a5db344ddfd9408b0008  /home/mxy593/snapshots/qwen3-32b-neutral/v2/artifacts/run-stdout.log
+3cfac3048661e55dd7b09dfa35a25f6fe16c66446d37e3d3655ac81892043907  /home/mxy593/snapshots/qwen3-32b-neutral/v2/artifacts/runner.log
+e32b15c7b2f68ec2d96fd780dec18842d5f5fecbcd6c89df73394f5c1cac589f  /home/mxy593/snapshots/qwen3-32b-neutral/v2/reasoning-trace.txt
