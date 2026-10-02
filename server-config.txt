@@ -1,0 +1,1 @@
+Wed Sep 30 21:39:46 2026 /usr/bin/python3 /usr/local/bin/vllm serve Qwen/Qwen3-32B --served-model-name qwen3-32b --host 127.0.0.1 --port 8595 --tensor-parallel-size 1 --dtype bfloat16 --max-model-len 32768 --max-num-seqs 4 --gpu-memory-utilization 0.90 --enable-auto-tool-choice --tool-call-parser hermes --reasoning-parser qwen3
