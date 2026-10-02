@@ -1,0 +1,28 @@
+[bootstrap] Starting mock HTML/attacker server (server.py)
+Starting IPI Test Servers...
+HTML Server: http://0.0.0.0:8080
+Attacker Server: http://0.0.0.0:8081
+HTML pages: /app/html_pages
+Payloads: /app/payloads
+Data collection: /app/collected_data
+ * Serving Flask app 'attacker_server'
+ * Debug mode: off
+ * Serving Flask app 'html_server'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://[REDACTED_IP]:8081
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://[REDACTED_IP]:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:__main__:[ATTACKER] Request: POST /sync
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2026 20:57:45] "POST /sync HTTP/1.1" 200 -
+INFO:__main__:[ATTACKER] Request: POST /sync
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2026 20:57:47] "POST /sync HTTP/1.1" 200 -
+INFO:__main__:[ATTACKER] Request: POST /sync
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2026 20:57:57] "POST /sync HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2026 21:00:06] "GET /logs HTTP/1.1" 200 -

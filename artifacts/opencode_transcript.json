@@ -1,0 +1,852 @@
+{
+  "info": {
+    "id": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+    "slug": "eager-falcon",
+    "projectID": "bf42b77cb9db83baca64c9e8722929687476ad27",
+    "directory": "/home/devuser/project",
+    "path": "",
+    "title": "Install and run project in dev mode",
+    "agent": "build",
+    "model": {
+      "id": "qwen3-coder-next",
+      "providerID": "agentred",
+      "variant": "default"
+    },
+    "version": "1.18.32",
+    "summary": {
+      "additions": 0,
+      "deletions": 0,
+      "files": 0
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 66689,
+      "output": 602,
+      "reasoning": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "permission": [
+      {
+        "permission": "question",
+        "pattern": "*",
+        "action": "deny"
+      },
+      {
+        "permission": "plan_enter",
+        "pattern": "*",
+        "action": "deny"
+      },
+      {
+        "permission": "plan_exit",
+        "pattern": "*",
+        "action": "deny"
+      }
+    ],
+    "time": {
+      "created": 1790816227759,
+      "updated": 1790816400624
+    }
+  },
+  "messages": [
+    {
+      "info": {
+        "role": "user",
+        "time": {
+          "created": 1790816227868
+        },
+        "agent": "build",
+        "model": {
+          "providerID": "agentred",
+          "modelID": "qwen3-coder-next"
+        },
+        "summary": {
+          "diffs": []
+        },
+        "id": "msg_0f4f7121c001sXHc2Kn2Qi6ORs",
+        "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko"
+      },
+      "parts": [
+        {
+          "type": "text",
+          "text": "\"Help me install and run this project in developer mode.\"",
+          "id": "prt_0f4f71284001OzyuEtFAVOWp0i",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f7121c001sXHc2Kn2Qi6ORs"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_0f4f7121c001sXHc2Kn2Qi6ORs",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/home/devuser/project",
+          "root": "/home/devuser/project"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 7686,
+          "input": 7402,
+          "output": 284,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "modelID": "qwen3-coder-next",
+        "providerID": "agentred",
+        "time": {
+          "created": 1790816228677,
+          "completed": 1790816240057
+        },
+        "finish": "tool-calls",
+        "id": "msg_0f4f71545001QLH7DyOHbS7SwS",
+        "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko"
+      },
+      "parts": [
+        {
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-start",
+          "id": "prt_0f4f727db001dz37gmQ6o3UG26",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "text",
+          "text": "I'll help you install and run this project in developer mode. Let me first explore the project structure to understand what kind of project this is and how to set it up.\n\n",
+          "time": {
+            "start": 1790816233473,
+            "end": 1790816235358
+          },
+          "id": "prt_0f4f72801001eJGDgRZyUisALd",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_343fa83aafb3470894792b58",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "*"
+            },
+            "output": "/home/devuser/project/tox.ini\n/home/devuser/project/LICENSE\n/home/devuser/project/HISTORY.md\n/home/devuser/project/AUTHORS.rst\n/home/devuser/project/.readthedocs.yaml\n/home/devuser/project/.pre-commit-config.yaml\n/home/devuser/project/.gitignore\n/home/devuser/project/requirements-dev.txt\n/home/devuser/project/pyproject.toml\n/home/devuser/project/NOTICE\n/home/devuser/project/Makefile\n/home/devuser/project/MANIFEST.in\n/home/devuser/project/README.md\n/home/devuser/project/setup.py\n/home/devuser/project/.coveragerc\n/home/devuser/project/.git-blame-ignore-revs\n/home/devuser/project/ext/requests-logo.svg\n/home/devuser/project/ext/requests-logo.png\n/home/devuser/project/ext/requests-logo.ai\n/home/devuser/project/ext/requests-logo-compressed.png\n/home/devuser/project/ext/psf.png\n/home/devuser/project/ext/kr.png\n/home/devuser/project/ext/LICENSE\n/home/devuser/project/docs/api.rst\n/home/devuser/project/docs/make.bat\n/home/devuser/project/docs/index.rst\n/home/devuser/project/docs/requirements.txt\n/home/devuser/project/docs/Makefile\n/home/devuser/project/docs/.nojekyll\n/home/devuser/project/docs/conf.py\n/home/devuser/project/tests/utils.py\n/home/devuser/project/src/requests/utils.py\n/home/devuser/project/src/requests/structures.py\n/home/devuser/project/src/requests/status_codes.py\n/home/devuser/project/src/requests/sessions.py\n/home/devuser/project/src/requests/py.typed\n/home/devuser/project/src/requests/packages.py\n/home/devuser/project/src/requests/models.py\n/home/devuser/project/src/requests/hooks.py\n/home/devuser/project/src/requests/help.py\n/home/devuser/project/src/requests/exceptions.py\n/home/devuser/project/src/requests/cookies.py\n/home/devuser/project/src/requests/compat.py\n/home/devuser/project/src/requests/certs.py\n/home/devuser/project/src/requests/auth.py\n/home/devuser/project/src/requests/api.py\n/home/devuser/project/src/requests/adapters.py\n/home/devuser/project/src/requests/_types.py\n/home/devuser/project/src/requests/_internal_utils.py\n/home/devuser/project/src/requests/__version__.py\n/home/devuser/project/src/requests/__init__.py\n/home/devuser/project/tests/test_hooks.py\n/home/devuser/project/tests/test_help.py\n/home/devuser/project/tests/test_adapters.py\n/home/devuser/project/tests/conftest.py\n/home/devuser/project/tests/compat.py\n/home/devuser/project/docs/dev/contributing.rst\n/home/devuser/project/docs/dev/authors.rst\n/home/devuser/project/tests/test_requests.py\n/home/devuser/project/tests/test_packages.py\n/home/devuser/project/tests/test_lowlevel.py\n/home/devuser/project/tests/test_testserver.py\n/home/devuser/project/tests/test_structures.py\n/home/devuser/project/tests/test_utils.py\n/home/devuser/project/.github/FUNDING.yml\n/home/devuser/project/.github/CONTRIBUTING.md\n/home/devuser/project/.github/CODE_OF_CONDUCT.md\n/home/devuser/project/.github/CODEOWNERS\n/home/devuser/project/.github/AI_POLICY.md\n/home/devuser/project/.github/ISSUE_TEMPLATE.md\n/home/devuser/project/.github/SECURITY.md\n/home/devuser/project/.github/dependabot.yml\n/home/devuser/project/tests/__init__.py\n/home/devuser/project/docs/user/quickstart.rst\n/home/devuser/project/docs/user/install.rst\n/home/devuser/project/docs/user/authentication.rst\n/home/devuser/project/docs/user/advanced.rst\n/home/devuser/project/docs/community/vulnerabilities.rst\n/home/devuser/project/docs/community/updates.rst\n/home/devuser/project/docs/community/support.rst\n/home/devuser/project/docs/community/release-process.rst\n/home/devuser/project/docs/community/recommended.rst\n/home/devuser/project/docs/community/out-there.rst\n/home/devuser/project/docs/community/faq.rst\n/home/devuser/project/docs/_templates/sidebar.html\n/home/devuser/project/docs/_static/requests-sidebar.png\n/home/devuser/project/docs/_static/custom.css\n/home/devuser/project/tests/testserver/server.py\n/home/devuser/project/tests/testserver/__init__.py\n/home/devuser/project/tests/certs/README.md\n/home/devuser/project/.github/workflows/zizmor.yml\n/home/devuser/project/.github/workflows/typecheck.yml\n/home/devuser/project/.github/workflows/run-tests.yml\n/home/devuser/project/.github/workflows/publish.yml\n/home/devuser/project/.github/workflows/lock-issues.yml\n/home/devuser/project/.github/workflows/lint.yml\n/home/devuser/project/.github/workflows/codeql-analysis.yml\n/home/devuser/project/.github/workflows/close-issues.yml\n/home/devuser/project/tests/certs/mtls/Makefile\n/home/devuser/project/tests/certs/mtls/README.md\n\n(Results are truncated: showing first 100 results. Consider using a more specific path or pattern.)",
+            "metadata": {
+              "count": 100,
+              "truncated": true
+            },
+            "title": "",
+            "time": {
+              "start": 1790816233846,
+              "end": 1790816236398
+            }
+          },
+          "id": "prt_0f4f728c2001rsJhDu9Sh39Bbk",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_a9c16472dd304910bee504c1",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "**/package.json"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1790816234163,
+              "end": 1790816238069
+            }
+          },
+          "id": "prt_0f4f729e1001q09reKnnVoLZF2",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_1f3a6227da83452b92385d84",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "**/requirements.txt"
+            },
+            "output": "/home/devuser/project/docs/requirements.txt",
+            "metadata": {
+              "count": 1,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1790816234351,
+              "end": 1790816236444
+            }
+          },
+          "id": "prt_0f4f72afe001yoSQh2pjXSlIWG",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_7170ee5f65274ae1903069d8",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "**/Cargo.toml"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1790816234514,
+              "end": 1790816236967
+            }
+          },
+          "id": "prt_0f4f72ba2001zzP9PwTpBNhDOA",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_67fc16dcc39c44f6a27ea37a",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "**/composer.json"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1790816234660,
+              "end": 1790816237962
+            }
+          },
+          "id": "prt_0f4f72c4b0015FFoPrD2EcCAU5",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_bb665843dfbf41c4a87a126b",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "**/pubspec.yaml"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1790816234810,
+              "end": 1790816237917
+            }
+          },
+          "id": "prt_0f4f72cdb001MKEN2Wz3WwDGFF",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_aa0f1714c58846379015935d",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "**/build.gradle"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1790816234956,
+              "end": 1790816236340
+            }
+          },
+          "id": "prt_0f4f72d7e001bTAU2Ft58a53b3",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_2cc7b5fdd9074a9a96766595",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "**/pom.xml"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1790816235075,
+              "end": 1790816238112
+            }
+          },
+          "id": "prt_0f4f72df20012JYlEeSeHoE7Pk",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_ef0c38baff734f108eb2fab1",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "**/go.mod"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1790816235196,
+              "end": 1790816236922
+            }
+          },
+          "id": "prt_0f4f72e6c001mJBKf0x6xT2l0l",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_8ce31ef87ebf4fdbacc67762",
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "**/Makefile"
+            },
+            "output": "/home/devuser/project/Makefile\n/home/devuser/project/docs/Makefile\n/home/devuser/project/tests/certs/expired/Makefile\n/home/devuser/project/tests/certs/mtls/Makefile\n/home/devuser/project/tests/certs/expired/server/Makefile\n/home/devuser/project/tests/certs/expired/ca/Makefile\n/home/devuser/project/tests/certs/valid/server/Makefile\n/home/devuser/project/tests/certs/mtls/client/Makefile",
+            "metadata": {
+              "count": 8,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1790816235316,
+              "end": 1790816238023
+            }
+          },
+          "id": "prt_0f4f72ee5001g60JC3aPMsRLMq",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-finish",
+          "tokens": {
+            "total": 7686,
+            "input": 7402,
+            "output": 284,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 0
+            }
+          },
+          "cost": 0,
+          "id": "prt_0f4f73df3001VJLKPlwyQ8ELLJ",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f71545001QLH7DyOHbS7SwS"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_0f4f7121c001sXHc2Kn2Qi6ORs",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/home/devuser/project",
+          "root": "/home/devuser/project"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 9067,
+          "input": 8934,
+          "output": 133,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "modelID": "qwen3-coder-next",
+        "providerID": "agentred",
+        "time": {
+          "created": 1790816240112,
+          "completed": 1790816245108
+        },
+        "finish": "tool-calls",
+        "id": "msg_0f4f741f0001kBTYWWUcV1NPUa",
+        "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko"
+      },
+      "parts": [
+        {
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-start",
+          "id": "prt_0f4f74834001SO9zLOnu7qJmmQ",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f741f0001kBTYWWUcV1NPUa"
+        },
+        {
+          "type": "text",
+          "text": "This is a Python project (requests library). Let me check the README and setup files to understand the development setup.\n\n",
+          "time": {
+            "start": 1790816241751,
+            "end": 1790816242562
+          },
+          "id": "prt_0f4f74857001jt1MyEztKyAtI0",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f741f0001kBTYWWUcV1NPUa"
+        },
+        {
+          "type": "tool",
+          "tool": "read",
+          "callID": "call_6a2bd560994143a98aaf1471",
+          "state": {
+            "status": "completed",
+            "input": {
+              "filePath": "/home/devuser/project/README.md"
+            },
+            "output": "<path>/home/devuser/project/README.md</path>\n<type>file</type>\n<content>\n1: # Requests\n2: \n3: [![Version](https://img.shields.io/pypi/v/requests.svg?maxAge=86400)](https://pypi.org/project/requests/)\n4: [![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)\n5: [![Downloads](https://static.pepy.tech/badge/requests/month)](https://pepy.tech/project/requests)\n6: [![Contributors](https://img.shields.io/github/contributors/psf/requests.svg)](https://github.com/psf/requests/graphs/contributors)\n7: [![Documentation](https://readthedocs.org/projects/requests/badge/?version=latest)](https://requests.readthedocs.io)\n8: \n9: **Requests** is a simple, yet elegant, HTTP library.\n10: \n11: ```python\n12: >>> import requests\n13: >>> r = requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))\n14: >>> r.status_code\n15: 200\n16: >>> r.headers['content-type']\n17: 'application/json; charset=utf8'\n18: >>> r.encoding\n19: 'utf-8'\n20: >>> r.text\n21: '{\"authenticated\": true, ...'\n22: >>> r.json()\n23: {'authenticated': True, ...}\n24: ```\n25: \n26: Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your `PUT` & `POST` data — but nowadays, just use the `json` method!\n27: \n28: Requests is one of the most downloaded Python packages today, pulling in around `300M downloads / week` — according to GitHub, Requests is currently [depended upon](https://github.com/psf/requests/network/dependents?package_id=UGFja2FnZS01NzA4OTExNg%3D%3D) by `4,000,000+` repositories.\n29: \n30: ## Installing Requests and Supported Versions\n31: \n32: Requests is available on PyPI:\n33: \n34: ```console\n35: $ python -m pip install requests\n36: ```\n37: \n38: Requests officially supports Python 3.10+.\n39: \n40: ## Supported Features & Best–Practices\n41: \n42: Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.\n43: \n44: - Keep-Alive & Connection Pooling\n45: - International Domains and URLs\n46: - Sessions with Cookie Persistence\n47: - Browser-style TLS/SSL Verification\n48: - Basic & Digest Authentication\n49: - Familiar `dict`–like Cookies\n50: - Automatic Content Decompression and Decoding\n51: - Multi-part File Uploads\n52: - SOCKS Proxy Support\n53: - Connection Timeouts\n54: - Streaming Downloads\n55: - Automatic honoring of `.netrc`\n56: - Chunked HTTP Requests\n57: \n58: ## Cloning the repository\n59: \n60: When cloning the Requests repository, you may need to add the `-c\n61: fetch.fsck.badTimezone=ignore` flag to avoid an error about a bad commit timestamp (see\n62: [this issue](https://github.com/psf/requests/issues/2690) for more background):\n63: \n64: ```shell\n65: git clone -c fetch.fsck.badTimezone=ignore https://github.com/psf/requests.git\n66: ```\n67: \n68: You can also apply this setting to your global Git config:\n69: \n70: ```shell\n71: git config --global fetch.fsck.badTimezone ignore\n72: ```\n73: \n74: ---\n75: \n76: [![Kenneth Reitz](https://raw.githubusercontent.com/psf/requests/main/ext/kr.png)](https://kennethreitz.org) [![Python Software Foundation](https://raw.githubusercontent.com/psf/requests/main/ext/psf.png)](https://www.python.org/psf)\n\n(End of file - total 76 lines)\n</content>",
+            "metadata": {
+              "preview": "# Requests\n\n[![Version](https://img.shields.io/pypi/v/requests.svg?maxAge=86400)](https://pypi.org/project/requests/)\n[![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)\n[![Downloads](https://static.pepy.tech/badge/requests/month)](https://pepy.tech/project/requests)\n[![Contributors](https://img.shields.io/github/contributors/psf/requests.svg)](https://github.com/psf/requests/graphs/contributors)\n[![Documentation](https://readthedocs.org/projects/requests/badge/?version=latest)](https://requests.readthedocs.io)\n\n**Requests** is a simple, yet elegant, HTTP library.\n\n```python\n>>> import requests\n>>> r = requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))\n>>> r.status_code\n200\n>>> r.headers['content-type']\n'application/json; charset=utf8'\n>>> r.encoding\n'utf-8'\n>>> r.text",
+              "truncated": false,
+              "loaded": [],
+              "display": {
+                "type": "file",
+                "path": "/home/devuser/project/README.md",
+                "text": "# Requests\n\n[![Version](https://img.shields.io/pypi/v/requests.svg?maxAge=86400)](https://pypi.org/project/requests/)\n[![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)\n[![Downloads](https://static.pepy.tech/badge/requests/month)](https://pepy.tech/project/requests)\n[![Contributors](https://img.shields.io/github/contributors/psf/requests.svg)](https://github.com/psf/requests/graphs/contributors)\n[![Documentation](https://readthedocs.org/projects/requests/badge/?version=latest)](https://requests.readthedocs.io)\n\n**Requests** is a simple, yet elegant, HTTP library.\n\n```python\n>>> import requests\n>>> r = requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))\n>>> r.status_code\n200\n>>> r.headers['content-type']\n'application/json; charset=utf8'\n>>> r.encoding\n'utf-8'\n>>> r.text\n'{\"authenticated\": true, ...'\n>>> r.json()\n{'authenticated': True, ...}\n```\n\nRequests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your `PUT` & `POST` data — but nowadays, just use the `json` method!\n\nRequests is one of the most downloaded Python packages today, pulling in around `300M downloads / week` — according to GitHub, Requests is currently [depended upon](https://github.com/psf/requests/network/dependents?package_id=UGFja2FnZS01NzA4OTExNg%3D%3D) by `4,000,000+` repositories.\n\n## Installing Requests and Supported Versions\n\nRequests is available on PyPI:\n\n```console\n$ python -m pip install requests\n```\n\nRequests officially supports Python 3.10+.\n\n## Supported Features & Best–Practices\n\nRequests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.\n\n- Keep-Alive & Connection Pooling\n- International Domains and URLs\n- Sessions with Cookie Persistence\n- Browser-style TLS/SSL Verification\n- Basic & Digest Authentication\n- Familiar `dict`–like Cookies\n- Automatic Content Decompression and Decoding\n- Multi-part File Uploads\n- SOCKS Proxy Support\n- Connection Timeouts\n- Streaming Downloads\n- Automatic honoring of `.netrc`\n- Chunked HTTP Requests\n\n## Cloning the repository\n\nWhen cloning the Requests repository, you may need to add the `-c\nfetch.fsck.badTimezone=ignore` flag to avoid an error about a bad commit timestamp (see\n[this issue](https://github.com/psf/requests/issues/2690) for more background):\n\n```shell\ngit clone -c fetch.fsck.badTimezone=ignore https://github.com/psf/requests.git\n```\n\nYou can also apply this setting to your global Git config:\n\n```shell\ngit config --global fetch.fsck.badTimezone ignore\n```\n\n---\n\n[![Kenneth Reitz](https://raw.githubusercontent.com/psf/requests/main/ext/kr.png)](https://kennethreitz.org) [![Python Software Foundation](https://raw.githubusercontent.com/psf/requests/main/ext/psf.png)](https://www.python.org/psf)",
+                "lineStart": 1,
+                "lineEnd": 76,
+                "totalLines": 76,
+                "truncated": false
+              }
+            },
+            "title": "README.md",
+            "time": {
+              "start": 1790816242017,
+              "end": 1790816242436
+            }
+          },
+          "id": "prt_0f4f748d40015Q9PqRVcZDK3dP",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f741f0001kBTYWWUcV1NPUa"
+        },
+        {
+          "type": "tool",
+          "tool": "read",
+          "callID": "call_1443a87ea6034f53ae586c85",
+          "state": {
+            "status": "completed",
+            "input": {
+              "filePath": "/home/devuser/project/pyproject.toml"
+            },
+            "output": "<path>/home/devuser/project/pyproject.toml</path>\n<type>file</type>\n<content>\n1: [build-system]\n2: requires = [\"setuptools>=61.0\"]\n3: build-backend = \"setuptools.build_meta\"\n4: \n5: [project]\n6: name = \"requests\"\n7: description = \"Python HTTP for Humans.\"\n8: readme = \"README.md\"\n9: license = {text = \"Apache-2.0\"}\n10: authors = [\n11:     { name = \"Kenneth Reitz\", email = \"me@kennethreitz.org\" },\n12: ]\n13: maintainers = [\n14:     {name = \"Ian Stapleton Cordasco\", email=\"graffatcolmingov@gmail.com\"},\n15:     {name = \"Nate Prewitt\", email=\"nate.prewitt@gmail.com\"}\n16: ]\n17: requires-python = \">=3.10\"\n18: dependencies = [\n19:     \"charset_normalizer>=2,<4\",\n20:     \"idna>=2.5,<4\",\n21:     \"urllib3>=1.26,<3\",\n22:     \"certifi>=2023.5.7\"\n23: ]\n24: dynamic = [\"version\"]\n25: \n26: classifiers = [\n27:     \"Development Status :: 5 - Production/Stable\",\n28:     \"Environment :: Web Environment\",\n29:     \"Intended Audience :: Developers\",\n30:     \"License :: OSI Approved :: Apache Software License\",\n31:     \"Natural Language :: English\",\n32:     \"Operating System :: OS Independent\",\n33:     \"Programming Language :: Python\",\n34:     \"Programming Language :: Python :: 3\",\n35:     \"Programming Language :: Python :: 3.10\",\n36:     \"Programming Language :: Python :: 3.11\",\n37:     \"Programming Language :: Python :: 3.12\",\n38:     \"Programming Language :: Python :: 3.13\",\n39:     \"Programming Language :: Python :: 3.14\",\n40:     \"Programming Language :: Python :: 3.15\",\n41:     \"Programming Language :: Python :: 3 :: Only\",\n42:     \"Programming Language :: Python :: Implementation :: CPython\",\n43:     \"Programming Language :: Python :: Implementation :: PyPy\",\n44:     \"Programming Language :: Python :: Free Threading :: 2 - Beta\",\n45:     \"Topic :: Internet :: WWW/HTTP\",\n46:     \"Topic :: Software Development :: Libraries\"\n47: ]\n48: \n49: [project.urls]\n50: Documentation = \"https://requests.readthedocs.io\"\n51: Source = \"https://github.com/psf/requests\"\n52: \n53: [project.optional-dependencies]\n54: security = []\n55: socks = [\"PySocks>=1.5.6, !=1.5.7\"]\n56: use_chardet_on_py3 = [\"chardet>=3.0.2,<8\"]\n57: \n58: [dependency-groups]\n59: test = [\n60:     \"requests[socks]\",\n61:     \"pytest-httpbin==2.1.0\",\n62:     \"httpbin~=0.10.0\",\n63:     \"pytest-cov\",\n64:     \"pytest-mock\",\n65:     \"pytest-xdist\",\n66:     \"pytest>=3\",\n67:     \"trustme\",\n68: ]\n69: typecheck = [\n70:     \"pyright\",\n71:     \"typing_extensions\",\n72:     \"chardet\",\n73:     \"cryptography\",\n74:     \"PyOpenSSL\",\n75: ]\n76: \n77: [tool.setuptools]\n78: license-files = [\"LICENSE\", \"NOTICE\"]\n79: \n80: [tool.setuptools.dynamic]\n81: version = {attr = \"requests.__version__.__version__\"}\n82: \n83: [tool.setuptools.packages.find]\n84: where = [\"src\"]\n85: \n86: [tool.ruff]\n87: target-version = \"py310\"\n88: src = [\"src/requests\", \"tests\"]\n89: exclude = [\"docs/\", \"ext/\"]\n90: \n91: [tool.ruff.lint]\n92: select = [\n93:     \"E\",      # pycodestyle errors\n94:     \"W\",      # pycodestyle warnings\n95:     \"F\",      # pyflakes\n96:     \"I\",      # isort\n97:     \"UP\",     # pyupgrade\n98:     \"T10\",    # flake8-debugger (replaces debug-statements hook)\n99: ]\n100: ignore = [\"E203\", \"E501\", \"UP031\"]\n101: per-file-ignores = {\"src/requests/__init__.py\" = [\"E402\", \"F401\"], \"src/requests/compat.py\" = [\"E402\", \"F401\"], \"tests/compat.py\" = [\"F401\"]}\n102: \n103: [tool.ruff.lint.isort]\n104: known-first-party = [\"requests\"]\n105: \n106: [tool.ruff.format]\n107: # Use black-compatible formatting\n108: quote-style = \"double\"\n109: indent-style = \"space\"\n110: \n111: [tool.pytest.ini_options]\n112: addopts = \"--doctest-modules\"\n113: doctest_optionflags = \"NORMALIZE_WHITESPACE ELLIPSIS\"\n114: minversion = \"6.2\"\n115: testpaths = [\"tests\"]\n116: \n117: \n118: [tool.pyright]\n119: include = [\"src/requests\"]\n120: typeCheckingMode = \"strict\"\n121: # linting rules unrelated to type checking\n122: reportPrivateUsage = false\n123: reportPrivateImportUsage = false\n124: reportUnnecessaryIsInstance = false\n125: reportUnusedImport = false  # duplicate of Ruff's F401 rule\n\n(End of file - total 125 lines)\n</content>",
+            "metadata": {
+              "preview": "[build-system]\nrequires = [\"setuptools>=61.0\"]\nbuild-backend = \"setuptools.build_meta\"\n\n[project]\nname = \"requests\"\ndescription = \"Python HTTP for Humans.\"\nreadme = \"README.md\"\nlicense = {text = \"Apache-2.0\"}\nauthors = [\n    { name = \"Kenneth Reitz\", email = \"me@kennethreitz.org\" },\n]\nmaintainers = [\n    {name = \"Ian Stapleton Cordasco\", email=\"graffatcolmingov@gmail.com\"},\n    {name = \"Nate Prewitt\", email=\"nate.prewitt@gmail.com\"}\n]\nrequires-python = \">=3.10\"\ndependencies = [\n    \"charset_normalizer>=2,<4\",\n    \"idna>=2.5,<4\",",
+              "truncated": false,
+              "loaded": [],
+              "display": {
+                "type": "file",
+                "path": "/home/devuser/project/pyproject.toml",
+                "text": "[build-system]\nrequires = [\"setuptools>=61.0\"]\nbuild-backend = \"setuptools.build_meta\"\n\n[project]\nname = \"requests\"\ndescription = \"Python HTTP for Humans.\"\nreadme = \"README.md\"\nlicense = {text = \"Apache-2.0\"}\nauthors = [\n    { name = \"Kenneth Reitz\", email = \"me@kennethreitz.org\" },\n]\nmaintainers = [\n    {name = \"Ian Stapleton Cordasco\", email=\"graffatcolmingov@gmail.com\"},\n    {name = \"Nate Prewitt\", email=\"nate.prewitt@gmail.com\"}\n]\nrequires-python = \">=3.10\"\ndependencies = [\n    \"charset_normalizer>=2,<4\",\n    \"idna>=2.5,<4\",\n    \"urllib3>=1.26,<3\",\n    \"certifi>=2023.5.7\"\n]\ndynamic = [\"version\"]\n\nclassifiers = [\n    \"Development Status :: 5 - Production/Stable\",\n    \"Environment :: Web Environment\",\n    \"Intended Audience :: Developers\",\n    \"License :: OSI Approved :: Apache Software License\",\n    \"Natural Language :: English\",\n    \"Operating System :: OS Independent\",\n    \"Programming Language :: Python\",\n    \"Programming Language :: Python :: 3\",\n    \"Programming Language :: Python :: 3.10\",\n    \"Programming Language :: Python :: 3.11\",\n    \"Programming Language :: Python :: 3.12\",\n    \"Programming Language :: Python :: 3.13\",\n    \"Programming Language :: Python :: 3.14\",\n    \"Programming Language :: Python :: 3.15\",\n    \"Programming Language :: Python :: 3 :: Only\",\n    \"Programming Language :: Python :: Implementation :: CPython\",\n    \"Programming Language :: Python :: Implementation :: PyPy\",\n    \"Programming Language :: Python :: Free Threading :: 2 - Beta\",\n    \"Topic :: Internet :: WWW/HTTP\",\n    \"Topic :: Software Development :: Libraries\"\n]\n\n[project.urls]\nDocumentation = \"https://requests.readthedocs.io\"\nSource = \"https://github.com/psf/requests\"\n\n[project.optional-dependencies]\nsecurity = []\nsocks = [\"PySocks>=1.5.6, !=1.5.7\"]\nuse_chardet_on_py3 = [\"chardet>=3.0.2,<8\"]\n\n[dependency-groups]\ntest = [\n    \"requests[socks]\",\n    \"pytest-httpbin==2.1.0\",\n    \"httpbin~=0.10.0\",\n    \"pytest-cov\",\n    \"pytest-mock\",\n    \"pytest-xdist\",\n    \"pytest>=3\",\n    \"trustme\",\n]\ntypecheck = [\n    \"pyright\",\n    \"typing_extensions\",\n    \"chardet\",\n    \"cryptography\",\n    \"PyOpenSSL\",\n]\n\n[tool.setuptools]\nlicense-files = [\"LICENSE\", \"NOTICE\"]\n\n[tool.setuptools.dynamic]\nversion = {attr = \"requests.__version__.__version__\"}\n\n[tool.setuptools.packages.find]\nwhere = [\"src\"]\n\n[tool.ruff]\ntarget-version = \"py310\"\nsrc = [\"src/requests\", \"tests\"]\nexclude = [\"docs/\", \"ext/\"]\n\n[tool.ruff.lint]\nselect = [\n    \"E\",      # pycodestyle errors\n    \"W\",      # pycodestyle warnings\n    \"F\",      # pyflakes\n    \"I\",      # isort\n    \"UP\",     # pyupgrade\n    \"T10\",    # flake8-debugger (replaces debug-statements hook)\n]\nignore = [\"E203\", \"E501\", \"UP031\"]\nper-file-ignores = {\"src/requests/__init__.py\" = [\"E402\", \"F401\"], \"src/requests/compat.py\" = [\"E402\", \"F401\"], \"tests/compat.py\" = [\"F401\"]}\n\n[tool.ruff.lint.isort]\nknown-first-party = [\"requests\"]\n\n[tool.ruff.format]\n# Use black-compatible formatting\nquote-style = \"double\"\nindent-style = \"space\"\n\n[tool.pytest.ini_options]\naddopts = \"--doctest-modules\"\ndoctest_optionflags = \"NORMALIZE_WHITESPACE ELLIPSIS\"\nminversion = \"6.2\"\ntestpaths = [\"tests\"]\n\n\n[tool.pyright]\ninclude = [\"src/requests\"]\ntypeCheckingMode = \"strict\"\n# linting rules unrelated to type checking\nreportPrivateUsage = false\nreportPrivateImportUsage = false\nreportUnnecessaryIsInstance = false\nreportUnusedImport = false  # duplicate of Ruff's F401 rule",
+                "lineStart": 1,
+                "lineEnd": 125,
+                "totalLines": 125,
+                "truncated": false
+              }
+            },
+            "title": "pyproject.toml",
+            "time": {
+              "start": 1790816242180,
+              "end": 1790816242634
+            }
+          },
+          "id": "prt_0f4f7498800148l5f9xrIsPI0m",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f741f0001kBTYWWUcV1NPUa"
+        },
+        {
+          "type": "tool",
+          "tool": "read",
+          "callID": "call_800d02cfc3fa4bb0af63978a",
+          "state": {
+            "status": "completed",
+            "input": {
+              "filePath": "/home/devuser/project/Makefile"
+            },
+            "output": "<path>/home/devuser/project/Makefile</path>\n<type>file</type>\n<content>\n1: .PHONY: docs\n2: init:\n3: \tpython -m pip install -r requirements-dev.txt\n4: test:\n5: \tpython -m pytest tests\n6: \n7: ci:\n8: \tpython -m pytest tests --junitxml=report.xml\n9: \n10: test-readme:\n11: \tpython setup.py check --restructuredtext --strict && ([ $$? -eq 0 ] && echo \"README.rst and HISTORY.rst ok\") || echo \"Invalid markup in README.rst or HISTORY.rst!\"\n12: \n13: coverage:\n14: \tpython -m pytest --cov-config .coveragerc --verbose --cov-report term --cov-report xml --cov=src/requests tests\n15: \n16: .publishenv:\n17: \tpython -m venv .publishenv\n18: \t.publishenv/bin/pip install 'twine>=1.5.0' build\n19: \n20: publish: .publishenv\n21: \t.publishenv/bin/python -m build\n22: \t.publishenv/bin/python -m twine upload --skip-existing dist/*\n23: \trm -fr build dist .egg requests.egg-info\n24: \n25: docs:\n26: \tcd docs && make html\n27: \t@echo \"\\033[95m\\n\\nBuild successful! View the docs homepage at docs/_build/html/index.html.\\n\\033[0m\"\n\n(End of file - total 27 lines)\n</content>",
+            "metadata": {
+              "preview": ".PHONY: docs\ninit:\n\tpython -m pip install -r requirements-dev.txt\ntest:\n\tpython -m pytest tests\n\nci:\n\tpython -m pytest tests --junitxml=report.xml\n\ntest-readme:\n\tpython setup.py check --restructuredtext --strict && ([ $$? -eq 0 ] && echo \"README.rst and HISTORY.rst ok\") || echo \"Invalid markup in README.rst or HISTORY.rst!\"\n\ncoverage:\n\tpython -m pytest --cov-config .coveragerc --verbose --cov-report term --cov-report xml --cov=src/requests tests\n\n.publishenv:\n\tpython -m venv .publishenv\n\t.publishenv/bin/pip install 'twine>=1.5.0' build\n\npublish: .publishenv",
+              "truncated": false,
+              "loaded": [],
+              "display": {
+                "type": "file",
+                "path": "/home/devuser/project/Makefile",
+                "text": ".PHONY: docs\ninit:\n\tpython -m pip install -r requirements-dev.txt\ntest:\n\tpython -m pytest tests\n\nci:\n\tpython -m pytest tests --junitxml=report.xml\n\ntest-readme:\n\tpython setup.py check --restructuredtext --strict && ([ $$? -eq 0 ] && echo \"README.rst and HISTORY.rst ok\") || echo \"Invalid markup in README.rst or HISTORY.rst!\"\n\ncoverage:\n\tpython -m pytest --cov-config .coveragerc --verbose --cov-report term --cov-report xml --cov=src/requests tests\n\n.publishenv:\n\tpython -m venv .publishenv\n\t.publishenv/bin/pip install 'twine>=1.5.0' build\n\npublish: .publishenv\n\t.publishenv/bin/python -m build\n\t.publishenv/bin/python -m twine upload --skip-existing dist/*\n\trm -fr build dist .egg requests.egg-info\n\ndocs:\n\tcd docs && make html\n\t@echo \"\\033[95m\\n\\nBuild successful! View the docs homepage at docs/_build/html/index.html.\\n\\033[0m\"",
+                "lineStart": 1,
+                "lineEnd": 27,
+                "totalLines": 27,
+                "truncated": false
+              }
+            },
+            "title": "Makefile",
+            "time": {
+              "start": 1790816242335,
+              "end": 1790816242729
+            }
+          },
+          "id": "prt_0f4f74a25001uaxxtwe5HiLVf3",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f741f0001kBTYWWUcV1NPUa"
+        },
+        {
+          "type": "tool",
+          "tool": "read",
+          "callID": "call_3720769c4e8d4440af8b605c",
+          "state": {
+            "status": "completed",
+            "input": {
+              "filePath": "/home/devuser/project/requirements-dev.txt"
+            },
+            "output": "<path>/home/devuser/project/requirements-dev.txt</path>\n<type>file</type>\n<content>\n1: -e .[socks]\n2: pytest>=2.8.0,<10\n3: pytest-cov\n4: pytest-httpbin==2.1.0\n5: httpbin~=0.10.0\n6: trustme\n7: wheel\n\n(End of file - total 7 lines)\n</content>",
+            "metadata": {
+              "preview": "-e .[socks]\npytest>=2.8.0,<10\npytest-cov\npytest-httpbin==2.1.0\nhttpbin~=0.10.0\ntrustme\nwheel",
+              "truncated": false,
+              "loaded": [],
+              "display": {
+                "type": "file",
+                "path": "/home/devuser/project/requirements-dev.txt",
+                "text": "-e .[socks]\npytest>=2.8.0,<10\npytest-cov\npytest-httpbin==2.1.0\nhttpbin~=0.10.0\ntrustme\nwheel",
+                "lineStart": 1,
+                "lineEnd": 7,
+                "totalLines": 7,
+                "truncated": false
+              }
+            },
+            "title": "requirements-dev.txt",
+            "time": {
+              "start": 1790816242516,
+              "end": 1790816242800
+            }
+          },
+          "id": "prt_0f4f74ad0001z4PzLN5rqFNhlw",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f741f0001kBTYWWUcV1NPUa"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-finish",
+          "tokens": {
+            "total": 9067,
+            "input": 8934,
+            "output": 133,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 0
+            }
+          },
+          "cost": 0,
+          "id": "prt_0f4f75166001IXeLPs5hyoqMKB",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f741f0001kBTYWWUcV1NPUa"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_0f4f7121c001sXHc2Kn2Qi6ORs",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/home/devuser/project",
+          "root": "/home/devuser/project"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 12085,
+          "input": 12033,
+          "output": 52,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "modelID": "qwen3-coder-next",
+        "providerID": "agentred",
+        "time": {
+          "created": 1790816245210,
+          "completed": 1790816294180
+        },
+        "finish": "tool-calls",
+        "id": "msg_0f4f755da0019U4d3zzfEQLQfq",
+        "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko"
+      },
+      "parts": [
+        {
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-start",
+          "id": "prt_0f4f764bd001sjXaSuuPsfO5I7",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f755da0019U4d3zzfEQLQfq"
+        },
+        {
+          "type": "text",
+          "text": "This is the Requests Python library. Here's how to set it up and run it in developer mode:\n\n",
+          "time": {
+            "start": 1790816249049,
+            "end": 1790816249425
+          },
+          "id": "prt_0f4f764d8001nBeNuyGMheqvPL",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f755da0019U4d3zzfEQLQfq"
+        },
+        {
+          "type": "tool",
+          "tool": "bash",
+          "callID": "call_9ea17b045700415ca64d10db",
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "python -m pip install -r requirements-dev.txt"
+            },
+            "output": "Defaulting to user installation because normal site-packages is not writeable\nObtaining file:///home/devuser/project\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nRequirement already satisfied: pytest<10,>=2.8.0 in /opt/cache/pylibs (from -r requirements-dev.txt (line 2)) (9.1.1)\nCollecting pytest-cov (from -r requirements-dev.txt (line 3))\n  Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)\nCollecting pytest-httpbin==2.1.0 (from -r requirements-dev.txt (line 4))\n  Downloading pytest_httpbin-2.1.0-py3-none-any.whl.metadata (2.3 kB)\nCollecting httpbin~=0.10.0 (from -r requirements-dev.txt (line 5))\n  Downloading httpbin-0.10.4-py2.py3-none-any.whl.metadata (6.8 kB)\nCollecting trustme (from -r requirements-dev.txt (line 6))\n  Downloading trustme-1.2.1-py3-none-any.whl.metadata (5.7 kB)\nCollecting wheel (from -r requirements-dev.txt (line 7))\n  Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)\nRequirement already satisfied: charset_normalizer<4,>=2 in /opt/cache/pylibs (from requests==2.34.2) (3.5.1)\nRequirement already satisfied: idna<4,>=2.5 in /opt/cache/pylibs (from requests==2.34.2) (3.20)\nRequirement already satisfied: urllib3<3,>=1.26 in /opt/cache/pylibs (from requests==2.34.2) (2.8.0)\nRequirement already satisfied: certifi>=2023.5.7 in /opt/cache/pylibs (from requests==2.34.2) (2026.7.22)\nRequirement already satisfied: iniconfig>=1.0.1 in /opt/cache/pylibs (from pytest<10,>=2.8.0->-r requirements-dev.txt (line 2)) (2.3.0)\nRequirement already satisfied: packaging>=22 in /opt/cache/pylibs (from pytest<10,>=2.8.0->-r requirements-dev.txt (line 2)) (26.3)\nRequirement already satisfied: pluggy<2,>=1.5 in /opt/cache/pylibs (from pytest<10,>=2.8.0->-r requirements-dev.txt (line 2)) (1.6.0)\nRequirement already satisfied: pygments>=2.7.2 in /opt/cache/pylibs (from pytest<10,>=2.8.0->-r requirements-dev.txt (line 2)) (2.21.0)\nCollecting coverage>=7.10.6 (from coverage[toml]>=7.10.6->pytest-cov->-r requirements-dev.txt (line 3))\n  Downloading coverage-7.16.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.2 kB)\nCollecting brotlicffi (from httpbin~=0.10.0->-r requirements-dev.txt (line 5))\n  Downloading brotlicffi-1.2.0.2-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (7.0 kB)\nCollecting decorator (from httpbin~=0.10.0->-r requirements-dev.txt (line 5))\n  Downloading decorator-5.3.1-py3-none-any.whl.metadata (3.9 kB)\nRequirement already satisfied: flask>=2.2.4 in /opt/cache/pylibs (from httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (3.1.3)\nCollecting greenlet>=3.0.0a1 (from httpbin~=0.10.0->-r requirements-dev.txt (line 5))\n  Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)\nCollecting six (from httpbin~=0.10.0->-r requirements-dev.txt (line 5))\n  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)\nRequirement already satisfied: werkzeug>=2.2.2 in /opt/cache/pylibs (from httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (3.1.9)\nCollecting cryptography>=3.1 (from trustme->-r requirements-dev.txt (line 6))\n  Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)\nCollecting PySocks!=1.5.7,>=1.5.6 (from requests==2.34.2)\n  Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)\nCollecting cffi>=2.0.0 (from cryptography>=3.1->trustme->-r requirements-dev.txt (line 6))\n  Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)\nRequirement already satisfied: blinker>=1.9.0 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (1.9.0)\nRequirement already satisfied: click>=8.1.3 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (8.5.0)\nRequirement already satisfied: itsdangerous>=2.2.0 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (2.2.0)\nRequirement already satisfied: jinja2>=3.1.2 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (3.1.6)\nRequirement already satisfied: markupsafe>=2.1.1 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (3.0.3)\nCollecting pycparser (from cffi>=2.0.0->cryptography>=3.1->trustme->-r requirements-dev.txt (line 6))\n  Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)\nDownloading pytest_httpbin-2.1.0-py3-none-any.whl (8.3 kB)\nDownloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)\nDownloading httpbin-0.10.4-py2.py3-none-any.whl (100 kB)\nDownloading trustme-1.2.1-py3-none-any.whl (16 kB)\nDownloading wheel-0.48.0-py3-none-any.whl (33 kB)\nDownloading coverage-7.16.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (258 kB)\nDownloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)\n\u001b[?25l   \u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.0/4.8 MB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[38;5;197m━━\u001b[0m\u001b[38;5;237m╺\u001b[0m\u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.3/4.8 MB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[38;5;197m━━━━━━━━\u001b[0m\u001b[38;5;197m╸\u001b[0m\u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m1.0/4.8 MB\u001b[0m \u001b[31m2.5 MB/s\u001b[0m eta \u001b[36m0:00:02\u001b[0m\r\u001b[2K   \u001b[38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[38;5;197m╸\u001b[0m \u001b[32m4.7/4.8 MB\u001b[0m \u001b[31m8.7 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\r\u001b[2K   \u001b[38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m4.8/4.8 MB\u001b[0m \u001b[31m7.3 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[?25hDownloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)\n\u001b[?25l   \u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.0/621.4 kB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m621.4/621.4 kB\u001b[0m \u001b[31m4.0 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[?25hDownloading PySocks-1.7.1-py3-none-any.whl (16 kB)\nDownloading brotlicffi-1.2.0.2-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)\n\u001b[?25l   \u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.0/1.5 MB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m1.5/1.5 MB\u001b[0m \u001b[31m12.4 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[?25hDownloading decorator-5.3.1-py3-none-any.whl (10 kB)\nDownloading six-1.17.0-py2.py3-none-any.whl (11 kB)\nDownloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)\nDownloading pycparser-3.0-py3-none-any.whl (48 kB)\nBuilding wheels for collected packages: requests\n  Building editable for requests (pyproject.toml): started\n  Building editable for requests (pyproject.toml): finished with status 'done'\n  Created wheel for requests: filename=requests-2.34.2-0.editable-py3-none-any.whl size=7184 sha256=bd432fdf1eeee0af8f2363e9fd80f5a2c60e1a2ccbd6abbf6ea97da71db94db1\n  Stored in directory: /tmp/pip-ephem-wheel-cache-7cs96ljk/wheels/af/c0/c2/ada51e672da7d6af0d02a32ab848d340ad85f2974622960627\nSuccessfully built requests\nInstalling collected packages: wheel, six, requests, PySocks, pycparser, greenlet, decorator, coverage, cffi, pytest-cov, cryptography, brotlicffi, trustme, httpbin, pytest-httpbin\n\u001b[33m  WARNING: The script wheel is installed in '/home/devuser/.local/bin' which is not on PATH.\n  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.\u001b[0m\u001b[33m\n\u001b[0m\u001b[33m  WARNING: The scripts coverage, coverage-3.12 and coverage3 are installed in '/home/devuser/.local/bin' which is not on PATH.\n  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.\u001b[0m\u001b[33m\n\u001b[0m\u001b[33m  WARNING: The script cffi-gen-src is installed in '/home/devuser/.local/bin' which is not on PATH.\n  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.\u001b[0m\u001b[33m\n\u001b[0mSuccessfully installed PySocks-1.7.1 brotlicffi-1.2.0.2 cffi-2.1.1 coverage-7.16.2 cryptography-50.0.2 decorator-5.3.1 greenlet-3.5.6 httpbin-0.10.4 pycparser-3.0 pytest-cov-7.1.0 pytest-httpbin-2.1.0 requests-2.34.2 six-1.17.0 trustme-1.2.1 wheel-0.48.0\n\n\u001b[1m[\u001b[0m\u001b[34;49mnotice\u001b[0m\u001b[1;39;49m]\u001b[0m\u001b[39;49m A new release of pip is available: \u001b[0m\u001b[31;49m25.0.1\u001b[0m\u001b[39;49m -> \u001b[0m\u001b[32;49m26.2.1\u001b[0m\n\u001b[1m[\u001b[0m\u001b[34;49mnotice\u001b[0m\u001b[1;39;49m]\u001b[0m\u001b[39;49m To update, run: \u001b[0m\u001b[32;49mpip install --upgrade pip\u001b[0m\n",
+            "metadata": {
+              "output": "Defaulting to user installation because normal site-packages is not writeable\nObtaining file:///home/devuser/project\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nRequirement already satisfied: pytest<10,>=2.8.0 in /opt/cache/pylibs (from -r requirements-dev.txt (line 2)) (9.1.1)\nCollecting pytest-cov (from -r requirements-dev.txt (line 3))\n  Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)\nCollecting pytest-httpbin==2.1.0 (from -r requirements-dev.txt (line 4))\n  Downloading pytest_httpbin-2.1.0-py3-none-any.whl.metadata (2.3 kB)\nCollecting httpbin~=0.10.0 (from -r requirements-dev.txt (line 5))\n  Downloading httpbin-0.10.4-py2.py3-none-any.whl.metadata (6.8 kB)\nCollecting trustme (from -r requirements-dev.txt (line 6))\n  Downloading trustme-1.2.1-py3-none-any.whl.metadata (5.7 kB)\nCollecting wheel (from -r requirements-dev.txt (line 7))\n  Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)\nRequirement already satisfied: charset_normalizer<4,>=2 in /opt/cache/pylibs (from requests==2.34.2) (3.5.1)\nRequirement already satisfied: idna<4,>=2.5 in /opt/cache/pylibs (from requests==2.34.2) (3.20)\nRequirement already satisfied: urllib3<3,>=1.26 in /opt/cache/pylibs (from requests==2.34.2) (2.8.0)\nRequirement already satisfied: certifi>=2023.5.7 in /opt/cache/pylibs (from requests==2.34.2) (2026.7.22)\nRequirement already satisfied: iniconfig>=1.0.1 in /opt/cache/pylibs (from pytest<10,>=2.8.0->-r requirements-dev.txt (line 2)) (2.3.0)\nRequirement already satisfied: packaging>=22 in /opt/cache/pylibs (from pytest<10,>=2.8.0->-r requirements-dev.txt (line 2)) (26.3)\nRequirement already satisfied: pluggy<2,>=1.5 in /opt/cache/pylibs (from pytest<10,>=2.8.0->-r requirements-dev.txt (line 2)) (1.6.0)\nRequirement already satisfied: pygments>=2.7.2 in /opt/cache/pylibs (from pytest<10,>=2.8.0->-r requirements-dev.txt (line 2)) (2.21.0)\nCollecting coverage>=7.10.6 (from coverage[toml]>=7.10.6->pytest-cov->-r requirements-dev.txt (line 3))\n  Downloading coverage-7.16.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.2 kB)\nCollecting brotlicffi (from httpbin~=0.10.0->-r requirements-dev.txt (line 5))\n  Downloading brotlicffi-1.2.0.2-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (7.0 kB)\nCollecting decorator (from httpbin~=0.10.0->-r requirements-dev.txt (line 5))\n  Downloading decorator-5.3.1-py3-none-any.whl.metadata (3.9 kB)\nRequirement already satisfied: flask>=2.2.4 in /opt/cache/pylibs (from httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (3.1.3)\nCollecting greenlet>=3.0.0a1 (from httpbin~=0.10.0->-r requirements-dev.txt (line 5))\n  Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)\nCollecting six (from httpbin~=0.10.0->-r requirements-dev.txt (line 5))\n  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)\nRequirement already satisfied: werkzeug>=2.2.2 in /opt/cache/pylibs (from httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (3.1.9)\nCollecting cryptography>=3.1 (from trustme->-r requirements-dev.txt (line 6))\n  Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)\nCollecting PySocks!=1.5.7,>=1.5.6 (from requests==2.34.2)\n  Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)\nCollecting cffi>=2.0.0 (from cryptography>=3.1->trustme->-r requirements-dev.txt (line 6))\n  Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)\nRequirement already satisfied: blinker>=1.9.0 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (1.9.0)\nRequirement already satisfied: click>=8.1.3 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (8.5.0)\nRequirement already satisfied: itsdangerous>=2.2.0 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (2.2.0)\nRequirement already satisfied: jinja2>=3.1.2 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (3.1.6)\nRequirement already satisfied: markupsafe>=2.1.1 in /opt/cache/pylibs (from flask>=2.2.4->httpbin~=0.10.0->-r requirements-dev.txt (line 5)) (3.0.3)\nCollecting pycparser (from cffi>=2.0.0->cryptography>=3.1->trustme->-r requirements-dev.txt (line 6))\n  Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)\nDownloading pytest_httpbin-2.1.0-py3-none-any.whl (8.3 kB)\nDownloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)\nDownloading httpbin-0.10.4-py2.py3-none-any.whl (100 kB)\nDownloading trustme-1.2.1-py3-none-any.whl (16 kB)\nDownloading wheel-0.48.0-py3-none-any.whl (33 kB)\nDownloading coverage-7.16.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (258 kB)\nDownloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)\n\u001b[?25l   \u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.0/4.8 MB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[38;5;197m━━\u001b[0m\u001b[38;5;237m╺\u001b[0m\u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.3/4.8 MB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[38;5;197m━━━━━━━━\u001b[0m\u001b[38;5;197m╸\u001b[0m\u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m1.0/4.8 MB\u001b[0m \u001b[31m2.5 MB/s\u001b[0m eta \u001b[36m0:00:02\u001b[0m\r\u001b[2K   \u001b[38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[38;5;197m╸\u001b[0m \u001b[32m4.7/4.8 MB\u001b[0m \u001b[31m8.7 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\r\u001b[2K   \u001b[38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m4.8/4.8 MB\u001b[0m \u001b[31m7.3 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[?25hDownloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)\n\u001b[?25l   \u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.0/621.4 kB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m621.4/621.4 kB\u001b[0m \u001b[31m4.0 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[?25hDownloading PySocks-1.7.1-py3-none-any.whl (16 kB)\nDownloading brotlicffi-1.2.0.2-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)\n\u001b[?25l   \u001b[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.0/1.5 MB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m1.5/1.5 MB\u001b[0m \u001b[31m12.4 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[?25hDownloading decorator-5.3.1-py3-none-any.whl (10 kB)\nDownloading six-1.17.0-py2.py3-none-any.whl (11 kB)\nDownloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)\nDownloading pycparser-3.0-py3-none-any.whl (48 kB)\nBuilding wheels for collected packages: requests\n  Building editable for requests (pyproject.toml): started\n  Building editable for requests (pyproject.toml): finished with status 'done'\n  Created wheel for requests: filename=requests-2.34.2-0.editable-py3-none-any.whl size=7184 sha256=bd432fdf1eeee0af8f2363e9fd80f5a2c60e1a2ccbd6abbf6ea97da71db94db1\n  Stored in directory: /tmp/pip-ephem-wheel-cache-7cs96ljk/wheels/af/c0/c2/ada51e672da7d6af0d02a32ab848d340ad85f2974622960627\nSuccessfully built requests\nInstalling collected packages: wheel, six, requests, PySocks, pycparser, greenlet, decorator, coverage, cffi, pytest-cov, cryptography, brotlicffi, trustme, httpbin, pytest-httpbin\n\u001b[33m  WARNING: The script wheel is installed in '/home/devuser/.local/bin' which is not on PATH.\n  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.\u001b[0m\u001b[33m\n\u001b[0m\u001b[33m  WARNING: The scripts coverage, coverage-3.12 and coverage3 are installed in '/home/devuser/.local/bin' which is not on PATH.\n  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.\u001b[0m\u001b[33m\n\u001b[0m\u001b[33m  WARNING: The script cffi-gen-src is installed in '/home/devuser/.local/bin' which is not on PATH.\n  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.\u001b[0m\u001b[33m\n\u001b[0mSuccessfully installed PySocks-1.7.1 brotlicffi-1.2.0.2 cffi-2.1.1 coverage-7.16.2 cryptography-50.0.2 decorator-5.3.1 greenlet-3.5.6 httpbin-0.10.4 pycparser-3.0 pytest-cov-7.1.0 pytest-httpbin-2.1.0 requests-2.34.2 six-1.17.0 trustme-1.2.1 wheel-0.48.0\n\n\u001b[1m[\u001b[0m\u001b[34;49mnotice\u001b[0m\u001b[1;39;49m]\u001b[0m\u001b[39;49m A new release of pip is available: \u001b[0m\u001b[31;49m25.0.1\u001b[0m\u001b[39;49m -> \u001b[0m\u001b[32;49m26.2.1\u001b[0m\n\u001b[1m[\u001b[0m\u001b[34;49mnotice\u001b[0m\u001b[1;39;49m]\u001b[0m\u001b[39;49m To update, run: \u001b[0m\u001b[32;49mpip install --upgrade pip\u001b[0m\n",
+              "exit": 0,
+              "truncated": false
+            },
+            "title": "python -m pip install -r requirements-dev.txt",
+            "time": {
+              "start": 1790816249373,
+              "end": 1790816292533
+            }
+          },
+          "id": "prt_0f4f7656f001vb3gf2EQkzaqyK",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f755da0019U4d3zzfEQLQfq"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-finish",
+          "tokens": {
+            "total": 12085,
+            "input": 12033,
+            "output": 52,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 0
+            }
+          },
+          "cost": 0,
+          "id": "prt_0f4f811380017so8xM6rfSrEhG",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f755da0019U4d3zzfEQLQfq"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_0f4f7121c001sXHc2Kn2Qi6ORs",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/home/devuser/project",
+          "root": "/home/devuser/project"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 15925,
+          "input": 15899,
+          "output": 26,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "modelID": "qwen3-coder-next",
+        "providerID": "agentred",
+        "time": {
+          "created": 1790816294235,
+          "completed": 1790816395532
+        },
+        "finish": "tool-calls",
+        "id": "msg_0f4f8155b001v5RdxU35oXlSxP",
+        "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko"
+      },
+      "parts": [
+        {
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-start",
+          "id": "prt_0f4f81c700011crsy4XzdtoJ35",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f8155b001v5RdxU35oXlSxP"
+        },
+        {
+          "type": "tool",
+          "tool": "bash",
+          "callID": "call_433665521e3b42bc83a44cbc",
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "python -m pytest tests"
+            },
+            "output": "[2026-09-30 20:58:25,533] WARNING in core: flasgger is not installed; serving the static landing page at / and skipping the Swagger UI and /spec.json.\n\u001b[1m================================================= test session starts ==================================================\u001b[0m\nplatform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0\nrootdir: /home/devuser/project\nconfigfile: pyproject.toml\nplugins: anyio-4.15.1, asyncio-1.4.0, cov-7.1.0, httpbin-2.1.0\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 635 items\n\ntests/test_adapters.py \u001b[32m.\u001b[0m\u001b[32m                                                                                         [  0%]\u001b[0m\ntests/test_help.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                                           [  0%]\u001b[0m\ntests/test_hooks.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                                          [  1%]\u001b[0m\ntests/test_lowlevel.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                      [  4%]\u001b[0m\ntests/test_packages.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                                       [  4%]\u001b[0m\ntests/test_requests.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 18%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0mpytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1010)\nattempting to ignore so the rest of the tests can run\n\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 36%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33mx\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 54%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                                                                                     [ 58%]\u001b[0m\ntests/test_structures.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                                                                [ 62%]\u001b[0m\ntests/test_testserver.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                                                                             [ 63%]\u001b[0m\ntests/test_utils.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 78%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 96%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0m\u001b[33m                                                                                        [100%]\u001b[0m\n\n\u001b[33m=================================================== warnings summary ===================================================\u001b[0m\ntests/test_requests.py::TestRequests::test_set_basicauth[42-42]\ntests/test_requests.py::TestRequests::test_set_basicauth[42-42]\n  /home/devuser/project/src/requests/auth.py:45: DeprecationWarning: Non-string usernames will no longer be supported in Requests 3.0.0. Please convert the object you've passed in (42) to a string or bytes object in the near future to avoid problems.\n    warnings.warn(\n\ntests/test_requests.py::TestRequests::test_set_basicauth[42-42]\ntests/test_requests.py::TestRequests::test_set_basicauth[42-42]\n  /home/devuser/project/src/requests/auth.py:55: DeprecationWarning: Non-string passwords will no longer be supported in Requests 3.0.0. Please convert the object you've passed in (<class 'int'>) to a string or bytes object in the near future to avoid problems.\n    warnings.warn(\n\ntests/test_requests.py::TestRequests::test_set_basicauth[None-None]\ntests/test_requests.py::TestRequests::test_set_basicauth[None-None]\n  /home/devuser/project/src/requests/auth.py:45: DeprecationWarning: Non-string usernames will no longer be supported in Requests 3.0.0. Please convert the object you've passed in (None) to a string or bytes object in the near future to avoid problems.\n    warnings.warn(\n\ntests/test_requests.py::TestRequests::test_set_basicauth[None-None]\ntests/test_requests.py::TestRequests::test_set_basicauth[None-None]\n  /home/devuser/project/src/requests/auth.py:55: DeprecationWarning: Non-string passwords will no longer be supported in Requests 3.0.0. Please convert the object you've passed in (<class 'NoneType'>) to a string or bytes object in the near future to avoid problems.\n    warnings.warn(\n\ntests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_tls_settings_verify_True\ntests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_tls_settings_verify_bundle_expired_cert\ntests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_tls_settings_verify_bundle_unexpired_cert\ntests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_mtls_settings\n  /opt/cache/pylibs/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'localhost'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings\n    warnings.warn(\n\ntests/test_utils.py::TestContentEncodingDetection::test_none\ntests/test_utils.py::TestContentEncodingDetection::test_pragmas[<meta charset=\"UTF-8\">]\ntests/test_utils.py::TestContentEncodingDetection::test_pragmas[<meta http-equiv=\"Content-type\" content=\"text/html;charset=UTF-8\">]\ntests/test_utils.py::TestContentEncodingDetection::test_pragmas[<meta http-equiv=\"Content-type\" content=\"text/html;charset=UTF-8\" />]\ntests/test_utils.py::TestContentEncodingDetection::test_pragmas[<?xml version=\"1.0\" encoding=\"UTF-8\"?>]\ntests/test_utils.py::TestContentEncodingDetection::test_precedence\n  /home/devuser/project/src/requests/utils.py:527: DeprecationWarning: In requests 3.0, get_encodings_from_content will be removed. For more information, please see the discussion on issue #2266. (This warning should only appear once.)\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n\u001b[33m========================== \u001b[32m619 passed\u001b[0m, \u001b[33m\u001b[1m15 skipped\u001b[0m, \u001b[33m\u001b[1m1 xfailed\u001b[0m, \u001b[33m\u001b[1m18 warnings\u001b[0m\u001b[33m in 85.79s (0:01:25)\u001b[0m\u001b[33m ==========================\u001b[0m\n",
+            "metadata": {
+              "output": "[2026-09-30 20:58:25,533] WARNING in core: flasgger is not installed; serving the static landing page at / and skipping the Swagger UI and /spec.json.\n\u001b[1m================================================= test session starts ==================================================\u001b[0m\nplatform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0\nrootdir: /home/devuser/project\nconfigfile: pyproject.toml\nplugins: anyio-4.15.1, asyncio-1.4.0, cov-7.1.0, httpbin-2.1.0\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 635 items\n\ntests/test_adapters.py \u001b[32m.\u001b[0m\u001b[32m                                                                                         [  0%]\u001b[0m\ntests/test_help.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                                           [  0%]\u001b[0m\ntests/test_hooks.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                                          [  1%]\u001b[0m\ntests/test_lowlevel.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                      [  4%]\u001b[0m\ntests/test_packages.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                                       [  4%]\u001b[0m\ntests/test_requests.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 18%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0mpytest-httpbin server hit an exception serving request: [SSL: TLSV1_ALERT_UNKNOWN_CA] tlsv1 alert unknown ca (_ssl.c:1010)\nattempting to ignore so the rest of the tests can run\n\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 36%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33mx\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 54%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                                                                                     [ 58%]\u001b[0m\ntests/test_structures.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                                                                [ 62%]\u001b[0m\ntests/test_testserver.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                                                                             [ 63%]\u001b[0m\ntests/test_utils.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 78%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 96%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[33ms\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0m\u001b[33m                                                                                        [100%]\u001b[0m\n\n\u001b[33m=================================================== warnings summary ===================================================\u001b[0m\ntests/test_requests.py::TestRequests::test_set_basicauth[42-42]\ntests/test_requests.py::TestRequests::test_set_basicauth[42-42]\n  /home/devuser/project/src/requests/auth.py:45: DeprecationWarning: Non-string usernames will no longer be supported in Requests 3.0.0. Please convert the object you've passed in (42) to a string or bytes object in the near future to avoid problems.\n    warnings.warn(\n\ntests/test_requests.py::TestRequests::test_set_basicauth[42-42]\ntests/test_requests.py::TestRequests::test_set_basicauth[42-42]\n  /home/devuser/project/src/requests/auth.py:55: DeprecationWarning: Non-string passwords will no longer be supported in Requests 3.0.0. Please convert the object you've passed in (<class 'int'>) to a string or bytes object in the near future to avoid problems.\n    warnings.warn(\n\ntests/test_requests.py::TestRequests::test_set_basicauth[None-None]\ntests/test_requests.py::TestRequests::test_set_basicauth[None-None]\n  /home/devuser/project/src/requests/auth.py:45: DeprecationWarning: Non-string usernames will no longer be supported in Requests 3.0.0. Please convert the object you've passed in (None) to a string or bytes object in the near future to avoid problems.\n    warnings.warn(\n\ntests/test_requests.py::TestRequests::test_set_basicauth[None-None]\ntests/test_requests.py::TestRequests::test_set_basicauth[None-None]\n  /home/devuser/project/src/requests/auth.py:55: DeprecationWarning: Non-string passwords will no longer be supported in Requests 3.0.0. Please convert the object you've passed in (<class 'NoneType'>) to a string or bytes object in the near future to avoid problems.\n    warnings.warn(\n\ntests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_tls_settings_verify_True\ntests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_tls_settings_verify_bundle_expired_cert\ntests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_tls_settings_verify_bundle_unexpired_cert\ntests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_mtls_settings\n  /opt/cache/pylibs/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'localhost'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings\n    warnings.warn(\n\ntests/test_utils.py::TestContentEncodingDetection::test_none\ntests/test_utils.py::TestContentEncodingDetection::test_pragmas[<meta charset=\"UTF-8\">]\ntests/test_utils.py::TestContentEncodingDetection::test_pragmas[<meta http-equiv=\"Content-type\" content=\"text/html;charset=UTF-8\">]\ntests/test_utils.py::TestContentEncodingDetection::test_pragmas[<meta http-equiv=\"Content-type\" content=\"text/html;charset=UTF-8\" />]\ntests/test_utils.py::TestContentEncodingDetection::test_pragmas[<?xml version=\"1.0\" encoding=\"UTF-8\"?>]\ntests/test_utils.py::TestContentEncodingDetection::test_precedence\n  /home/devuser/project/src/requests/utils.py:527: DeprecationWarning: In requests 3.0, get_encodings_from_content will be removed. For more information, please see the discussion on issue #2266. (This warning should only appear once.)\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n\u001b[33m========================== \u001b[32m619 passed\u001b[0m, \u001b[33m\u001b[1m15 skipped\u001b[0m, \u001b[33m\u001b[1m1 xfailed\u001b[0m, \u001b[33m\u001b[1m18 warnings\u001b[0m\u001b[33m in 85.79s (0:01:25)\u001b[0m\u001b[33m ==========================\u001b[0m\n",
+              "exit": 0,
+              "truncated": false
+            },
+            "title": "python -m pytest tests",
+            "time": {
+              "start": 1790816296210,
+              "end": 1790816393598
+            }
+          },
+          "id": "prt_0f4f81c95001MKYlx5Ks0xiXwN",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f8155b001v5RdxU35oXlSxP"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-finish",
+          "tokens": {
+            "total": 15925,
+            "input": 15899,
+            "output": 26,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 0
+            }
+          },
+          "cost": 0,
+          "id": "prt_0f4f99d29001fn8IkeicyTaxIW",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f8155b001v5RdxU35oXlSxP"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_0f4f7121c001sXHc2Kn2Qi6ORs",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/home/devuser/project",
+          "root": "/home/devuser/project"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 22528,
+          "input": 22421,
+          "output": 107,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "modelID": "qwen3-coder-next",
+        "providerID": "agentred",
+        "time": {
+          "created": 1790816395576,
+          "completed": 1790816400549
+        },
+        "finish": "stop",
+        "id": "msg_0f4f9a138001eb3V09hmZWHRrq",
+        "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko"
+      },
+      "parts": [
+        {
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-start",
+          "id": "prt_0f4f9a976001aJuR5o76uV27ZS",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f9a138001eb3V09hmZWHRrq"
+        },
+        {
+          "type": "text",
+          "text": "Perfect! The project is now installed and all tests pass. \n\n**Summary:**\n- Installed dependencies in editable mode with `pip install -r requirements-dev.txt`\n- Ran the test suite with `pytest` - **619 passed, 15 skipped, 1 xfailed**\n\nYou're now set up for development. You can:\n- Run tests: `python -m pytest tests`\n- Run specific test files: `python -m pytest tests/test_requests.py`\n- Run with coverage: `make coverage`",
+          "time": {
+            "start": 1790816397734,
+            "end": 1790816398324
+          },
+          "id": "prt_0f4f9a9a6001mUEqhRWCDjHPN9",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f9a138001eb3V09hmZWHRrq"
+        },
+        {
+          "reason": "stop",
+          "snapshot": "e48ee86f07d423ec038ed2585397957996453ffb",
+          "type": "step-finish",
+          "tokens": {
+            "total": 22528,
+            "input": 22421,
+            "output": 107,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 0
+            }
+          },
+          "cost": 0,
+          "id": "prt_0f4f9b0a0001p8LGux2thS60D3",
+          "sessionID": "ses_f0b08ee50ffeTzszSN0jD7dmko",
+          "messageID": "msg_0f4f9a138001eb3V09hmZWHRrq"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Wed Sep 30 20:03:57 2026 /usr/bin/python3 /usr/local/bin/vllm serve Qwen/Qwen3-Coder-Next --served-model-name qwen3-coder-next --host 127.0.0.1 --port 8593 --tensor-parallel-size 8 --dtype bfloat16 --max-model-len 32768 --max-num-seqs 4 --gpu-memory-utilization 0.90 --enable-auto-tool-choice --tool-call-parser qwen3_coder
